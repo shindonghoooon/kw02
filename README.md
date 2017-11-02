@@ -86,13 +86,16 @@ Rails 5.1은 크롬에서 실패 테스트 스크린 샷과 같은 추가 기능
 
 [Pull Request](https://github.com/rails/rails/pull/28038)
 
-Rails는 이제 
-[sekrets](https://github.com/ahoward/sekrets) gem에서 영감을 얻은 안전한 방법으로 애플리케이션 비밀 정보를 관리 할 수 있다.
+Rails는 이제[sekrets](https://github.com/ahoward/sekrets) gem에서 영감을 얻은 안전한 방법으로 애플리케이션 비밀 정보를 관리 할 수 있다.
 새로운 보안 비밀 파일을 설치하기 위해 `bin/rails secrets:setup`를 실행한다. 
-이것은 또한 저장소 외부에 저장되어야하는 마스터 키를 생성한다. 
+
+이것은 또한 저장소 외부에 저장되어야하는 
+마스터 키를 생성한다. 
 비밀 자체는 암호화 된 형식으로 변경 관리 
 시스템에 안전하게 체크인 할 수 있다.
-비밀은 `RAILS_MASTER_KEY` 환경 변수 또는 키 파일에 저장된 키를 사용하여 프로덕션에서 암호 해독된다.
+
+비밀은 `RAILS_MASTER_KEY` 환경 변수 또는 키 파일에 저장된 키를 사용하여 
+프로덕션에서 암호 해독된다.
 
 ### 매개변수화된 mailers
 
