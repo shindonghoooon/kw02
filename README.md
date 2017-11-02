@@ -166,8 +166,8 @@ end
 
 [Pull Request](https://github.com/rails/rails/pull/26976)
 
-Rails 5.1 이전 버전에서는, HTML 양식 처리에 모델 인스턴스에 대한 `form_for`와 커스텀 URL에 대한 `form_tag` 이렇게  두 개의 인터페이스가 있었습니다.
-
+Rails 5.1 이전 버전에서는, HTML 양식 처리에 모델 인스턴스에 대한 `form_for`와 
+커스텀 URL에 대한 `form_tag` 이렇게  두 개의 인터페이스가 있었습니다.
 
 Rails 5.1 에서는 두 개의  인터페이스를 `form_with`로 결합하고,
 스코프 혹은 모델에 기반하여 폼 태그를 생성할 수 있습니다.
@@ -236,19 +236,22 @@ scope를 추가하면 입력 필드 이름에 접두어가 붙음:
 
 ### 다중 연결을 사용한 Transactional tests
 
-Transactional test들은 데이터베이스 transaction에서 모든 Active Record 연결을 완료했습니다.
+Transactional test들은 데이터베이스 transaction에서 
+모든 Active Record 연결을 완료했습니다.
 
 테스트가 추가적인 스레드를 생성할 때, 그리고 이런 스레드들이 데이터베이스 
 연결될 때의 연결들은 이제 특별하게 처리됩니다:
 
 이 스레드들은 Managed Transaction 내에 있는 하나의 연결을 공유할 것입니다.
-모든 스레드들이 가장 바깥 쪽의 transaction을 무시하면서, 동일한 상태의 데이터베이스를 볼 수 있도록 보장해줍니다.
+모든 스레드들이 가장 바깥 쪽의 transaction을 무시하면서, 
+동일한 상태의 데이터베이스를 볼 수 있도록 보장해줍니다.
 이전에, 이러한 추가적인 연결들은 고정 줄로 보는 것이 불가능했습니다, 예를 들면.
 
 스레드가 중첩된 transaction에 들어갈 때, 독립을 유지하기 위해, 
 일시적으로 연결의 독점적인 사용을 얻을것입니다.
 
-테스트가 생성된 스레드에서 별도의 transaction 외부 연결을 얻는 데 의존하는 경우,
+테스트가 생성된 스레드에서 별도의 transaction 
+외부 연결을 얻는 데 의존하는 경우,
 보다 명확한 연결 관리자로 전환할 필요가 있습니다.
 
 당신의 테스트에서 스레드를 생성하고 이 스레드들이 명시적 데이터베이스 transaction을 사용하면서 
@@ -285,7 +288,8 @@ Railties
 
 ### 주요 변경점
 
-*   모든 환경에 로드되어지는 `config/secrets.yml`에 공유 섹션을 추가
+*   모든 환경에 로드되어지는 `config/secrets.yml`에 
+공유 섹션을 추가
     ([commit](https://github.com/rails/rails/commit/e530534265d2c32b5c5f772e81cb9002dcf5e9cf))
 
 *   `config/secrets.yml` 설정 파일은 이제 심벌로서 모든 키들과 함께 로드됨.
