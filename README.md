@@ -295,16 +295,19 @@ Railties
 *   `config/secrets.yml` 설정 파일은 이제 심벌로서 모든 키들과 함께 로드됨.
     ([Pull Request](https://github.com/rails/rails/pull/26929))
 
-*   기본 스택에서 jquery-rails를 제거함. Action View와 함께 제공되는 rails-ujs는 기본 UJS 어댑터로 포함.
+*   기본 스택에서 jquery-rails를 제거함. 
+Action View와 함께 제공되는 rails-ujs는 기본 UJS 어댑터로 포함.
     ([Pull Request](https://github.com/rails/rails/pull/27113))
 
 *   yarn binstub과  package.json. 으로 새로운 앱에서 Yarn 지원을 추가. 
     ([Pull Request](https://github.com/rails/rails/pull/26836))
 
-*   새로운 앱에서 rails/webpacker gem 에게 위임하게 되는 옵션인 `--webpack`을 통해 Webpack 지원을 추가.
+*   새로운 앱에서 rails/webpacker gem 
+에게 위임하게 되는 옵션인 `--webpack`을 통해 Webpack 지원을 추가.
     ([Pull Request](https://github.com/rails/rails/pull/27288))
 
-*   새로운 앱 생성 시, 만약 `--skip-git` 옵션이라면 Git 저장소를 초기화하는 것은 제공되지 않음.
+*   새로운 앱 생성 시, 만약 `--skip-git` 
+옵션이라면 Git 저장소를 초기화하는 것은 제공되지 않음.
     ([Pull Request](https://github.com/rails/rails/pull/27632))
 
 *   `config/secrets.yml.enc`에 암호화 된 기밀들을 추가.
@@ -320,7 +323,8 @@ Action Cable
 
 ### 주요 변경점
 
-*   여러 애플리케이션에서 동일한 Redis 서버를 실행할 때, 이름 충돌을 피하기 위해 `cable.yml`의 Redis와 이벤트 발생 Redis어댑터에 `channel_prefix`지원을 추가.
+*   여러 애플리케이션에서 동일한 Redis 서버를 실행할 때, 
+이름 충돌을 피하기 위해 `cable.yml`의 Redis와 이벤트 발생 Redis어댑터에 `channel_prefix`지원을 추가.
     ([Pull Request](https://github.com/rails/rails/pull/27425))
 
 *   양방향성 데이터를 위해 `ActiveSupport::Notifications`훅을 추가.
