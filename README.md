@@ -324,7 +324,8 @@ Action Cable
 ### 주요 변경점
 
 *   여러 애플리케이션에서 동일한 Redis 서버를 실행할 때, 
-이름 충돌을 피하기 위해 `cable.yml`의 Redis와 이벤트 발생 Redis어댑터에 `channel_prefix`지원을 추가.
+이름 충돌을 피하기 위해 `cable.yml`의 Redis와 이벤트 
+발생 Redis어댑터에 `channel_prefix`지원을 추가.
     ([Pull Request](https://github.com/rails/rails/pull/27425))
 
 *   양방향성 데이터를 위해 `ActiveSupport::Notifications`훅을 추가.
@@ -332,6 +333,7 @@ Action Cable
 
 Action Pack
 -----------
+
 자세한 변경사항은 [Changelog][action-pack] 을 참조하세요.
 
 ### 제거된 것들
@@ -342,7 +344,8 @@ Action Pack
     ([Commit](https://github.com/rails/rails/commit/98b8309569a326910a723f521911e54994b112fb),
     [Commit](https://github.com/rails/rails/commit/de9542acd56f60d281465a59eac11e15ca8b3323))
 
-*   제거 예정이었던 `ActionDispatch::Callbacks.to_prepare`과 `ActionDispatch::Callbacks.to_cleanup`을 제거.
+*   제거 예정이었던 `ActionDispatch::Callbacks.to_prepare`과 
+`ActionDispatch::Callbacks.to_cleanup`을 제거.
     ([Commit](https://github.com/rails/rails/commit/3f2b7d60a52ffb2ad2d4fcf889c06b631db1946b))
 
 *   제거 예정이었던 컨트롤러 필터와 연관된 메서드들을 제거.
@@ -383,7 +386,8 @@ Action View
 
 ### 주요 변경점
 
-*   이제 순수한 템플릿 핸들러(기본 Rails 5의 템플릿 핸들러)는 HTML-safe 문자열들을 출력.
+*   이제 순수한 템플릿 핸들러(기본 Rails 5의 템플릿 핸들러)는 
+HTML-safe 문자열들을 출력.
     ([commit](https://github.com/rails/rails/commit/1de0df86695f8fa2eeae6b8b46f9b53decfa6ec8))
 
 *   `datatime-local`필드를 생성하기 위해 `datetime_field`와 `datetime_field_tag`를 변경.
@@ -405,7 +409,8 @@ Action Mailer
 
 ### 주요 변경점
 
-*   첨부 파일이 포함되고 본문이 인라인으로 설정된 경우 사용자 지정 콘텐츠 형식을 사용.
+*   첨부 파일이 포함되고 본문이 인라인으로 설정된 경우 
+사용자 지정 콘텐츠 형식을 사용.
     ([Pull Request](https://github.com/rails/rails/pull/27227))
 
 *   `default`메서드에 값으로 lambdas를 전달하는 것을 허용.
@@ -415,16 +420,19 @@ Action Mailer
     매개변수화 지원을 추가.
     ([Commit](https://github.com/rails/rails/commit/1cec84ad2ddd843484ed40b1eb7492063ce71baf))
 
-*   메일러 액션에 들어오는 인자들을 `args`키 아래의 `process.action_mailer`이벤트로 전달.
+*   메일러 액션에 들어오는 인자들을 `args`키 아래의
+`process.action_mailer`이벤트로 전달.
     ([Pull Request](https://github.com/rails/rails/pull/27900))
 
 Active Record
 -------------
 
 자세한 변경사항은[Changelog][active-record]를 참고해주세요.
+
 ### 제거된 것들
 
-*   인자들과 블록을 동시에 `ActiveRecord::QueryMethods#select`에 전달하는 지원을 제거.
+*   인자들과 블록을 동시에 
+`ActiveRecord::QueryMethods#select`에 전달하는 지원을 제거.
     ([Commit](https://github.com/rails/rails/commit/4fc3366d9d99a0eb19e45ad2bf38534efbf8c8ce))
 
 *   제거 예정이었던  i18n스코프에서 `activerecord.errors.messages.restrict_dependent_destroy.one`과 
@@ -440,7 +448,8 @@ Active Record
 *   제거 예정이었던 `#tables`로부터 `name` 인자를 제거.
     ([Commit](https://github.com/rails/rails/commit/d5be101dd02214468a27b6839ffe338cfe8ef5f3))
 
-*   제거 예정이었던 테이블과 뷰를 반환하는 `#tables`와 `#table_exists?` 의 행동을 테이블만 반환하고 뷰는 반환하지 않기위해 제거.
+*   제거 예정이었던 테이블과 뷰를 반환하는 
+`#tables`와 `#table_exists?` 의 행동을 테이블만 반환하고 뷰는 반환하지 않기위해 제거.
     ([Commit](https://github.com/rails/rails/commit/5973a984c369a63720c2ac18b71012b8347479a8))
 
 *   제거 예정이었던 `ActiveRecord::StatementInvalid#initialize`와 `ActiveRecord::StatementInvalid#original_exception`
@@ -470,7 +479,8 @@ Active Record
 
 ### 제거 예정
 
-*   `error_on_ignored_order_or_limit`가 제거 예정 앞으로는 `error_on_ignored_order`를 사용.
+*   `error_on_ignored_order_or_limit`가 제거 예정 앞으로는 
+`error_on_ignored_order`를 사용.
     ([Commit](https://github.com/rails/rails/commit/451437c6f57e66cc7586ec966e530493927098c7))
 
 *   `sanitize_conditions`가 제거 예정 앞으로는 `sanitize_sql`를 사용.
@@ -499,14 +509,16 @@ Active Record
 *   일괄 처리의 한도에 대한 지원이 추가.
     ([Commit](https://github.com/rails/rails/commit/451437c6f57e66cc7586ec966e530493927098c7))
 
-*   Transactional tests는 이제 모든 Active Record connections를 데이터베이스 transactions로 감싼다.
+*   Transactional tests는 이제 모든 
+Active Record connections를 데이터베이스 transactions로 감싼다.
     ([Pull Request](https://github.com/rails/rails/pull/28726))
 
 *   `mysqldump`의 기본적인 명령어의 출력에 대한 주석을 스킵.
     ([Pull Request](https://github.com/rails/rails/pull/23301))
 
 *   전달된 블록을 자동으로 무시하는 대신 인자로 전달될 때 레코더를 카운트하기 위한 
-    루비의 `Enumerable#count`사용을 위해 `ActiveRecord::Relation#count` 를 수정.
+    루비의 `Enumerable#count`사용을 위해 
+    `ActiveRecord::Relation#count` 를 수정.
     ([Pull Request](https://github.com/rails/rails/pull/24203))
 
 *   SQL 에러를 억제하지 않도록 `psql`명령어를 `"-v ON_ERROR_STOP=1"`플래그와 전달.
@@ -540,7 +552,8 @@ Active Model
 
 ### 주요 변경점
 
-*   모델 속성에 할당 된 컬렉션 문자열이 더 이상 잘못 고정되지 않습니다.
+*   모델 속성에 할당 된 컬렉션 문자열이 
+더 이상 잘못 고정되지 않습니다.
     ([Pull Request](https://github.com/rails/rails/pull/28729))
 
 Active Job
@@ -558,8 +571,7 @@ Active Job
 
 ### 주요 변경점
 
-*   `ActiveJob::Base.retry_on`와 `ActiveJob::Base.discard_on`을 경유한 선언적 예외 
-    핸들링을 추가.
+*   `ActiveJob::Base.retry_on`와 `ActiveJob::Base.discard_on`을 경유한 선언적 예외 핸들링을 추가.
     ([Pull Request](https://github.com/rails/rails/pull/25991))
 
 *   재시도들이 실패한 후 사용자 로직의 `job.arguments`같은 것들에 액세스 하기 위해
@@ -588,8 +600,7 @@ Active Support
     `ActiveSupport::HashWithIndifferentAccess`를 사용.
     ([Pull Request](https://github.com/rails/rails/pull/28157))
 
-*   문자열을 `set_callback`과 `skip_callback`상의 `:if`와 `:unless`선택적 옵션
-    에 전달을 제거 예정.
+*   문자열을 `set_callback`과 `skip_callback`상의 `:if`와 `:unless`선택적 옵션에 전달을 제거 예정.
     ([Commit](https://github.com/rails/rails/commit/0952552))
 
 ### 주요 변경점
@@ -608,7 +619,8 @@ Active Support
     `Module#delegate_missing_to`를 추가.
     ([Pull Request](https://github.com/rails/rails/pull/23930))
 
-*   `Date#all_day`는 현재 날짜와 시간의 전체 날짜를 나타내는 범위를 반환하는 메소드를 추가.
+*   `Date#all_day`는 현재 날짜와 시간의 전체 날짜를 
+나타내는 범위를 반환하는 메소드를 추가.
     ([Pull Request](https://github.com/rails/rails/pull/24930))
 
 *   `assert_changes` 과 `assert_no_changes` 메서드는 test에 도입.
@@ -623,7 +635,10 @@ Active Support
 크레딧 표기
 -----------
 
-Rails를 견고하고 안정적인 프레임워크로 만들기 위해 많은 시간을 사용해주신 많은 개발자들에 대해서는 [Rails 기여자 목록](http://contributors.rubyonrails.org/)을 참고해주세요. 이 분들에게 경의를 표합니다.
+Rails를 견고하고 안정적인 프레임워크로 
+만들기 위해 많은 시간을 사용해주신 많은 
+개발자들에 대해서는 [Rails 기여자 목록](http://contributors.rubyonrails.org/)을 참고해주세요. 
+이 분들에게 경의를 표합니다.
 
 [railties]:       https://github.com/rails/rails/blob/5-1-stable/railties/CHANGELOG.md
 [action-pack]:    https://github.com/rails/rails/blob/5-1-stable/actionpack/CHANGELOG.md
