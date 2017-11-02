@@ -16,7 +16,8 @@ Rails 5.1에서 주목할 점
 
 이 릴리스에서는 주요 변경점에 대해서만 설명합니다.
 수정된 버그 및 변경점에 대해서는 Github Rails 저장소에 있는
-changelog나 [커밋 목록](https://github.com/rails/rails/commits/5-1-stable)을 참고해주세요.
+changelog나
+[커밋 목록](https://github.com/rails/rails/commits/5-1-stable)을 참고해주세요.
 
 --------------------------------------------------------------------------------
 
@@ -24,11 +25,12 @@ Rails 5.1로 업그레이드하기
 ----------------------
 
 기존 애플리케이션을 업그레이드한다면 그 전에 충분한 테스트 커버리지를 확보하는 것이 좋습니다.
-애플리케이션이 Rails 5.0으로 업그레이드되지 않았다면 우선 이를 우선하고, 
-애플리케이션이 정상적으로 동작하는지 충분히 확인한 뒤에 Rails 5.1을 올려주세요. 업그레이드 시의 주의점에 대해서는 
+애플리케이션이 Rails 5.0으로 업그레이드되지 않았다면 
+우선 이를 우선하고, 
+애플리케이션이 정상적으로 동작하는지 충분히 확인한 뒤에 Rails 5.1을 올려주세요. 
+업그레이드 시의 주의점에 대해서는 
 [Ruby on Rails 업그레이드 가이드](upgrading_ruby_on_rails.html#upgrading-from-rails-5-0-to-rails-5-1)
 를 참고해주세요.
-
 
 
 주요 변경점
@@ -38,9 +40,9 @@ Rails 5.1로 업그레이드하기
 
 [Pull Request](https://github.com/rails/rails/pull/26836)
 
-
 Rails 5.1은 NPM에서 Yarn을 통해 JavaScript 종속성을 관리 할 수 있습니다.
-이렇게하면 React, VueJS 또는 NPM 세계의 다른 라이브러리와 같은 라이브러리를 쉽게 사용할 수 있습니다. Yarn 지원은 에셋 파이프라인과 통합되어 모든 종속성이 
+이렇게하면 React, VueJS 또는 NPM 세계의 다른 라이브러리와 같은 라이브러리를 쉽게 사용할 수 있습니다. 
+Yarn 지원은 에셋 파이프라인과 통합되어 모든 종속성이 
 Rails 5.1 앱과 원활하게 작동합니다
 
 
@@ -49,11 +51,13 @@ Rails 5.1 앱과 원활하게 작동합니다
 [Pull Request](https://github.com/rails/rails/pull/27288)
 
 Rails 응용 프로그램은 JavaScript asset bundler인 [Webpack](https://webpack.js.org/)과 
-새로운 [Webpacker](https://github.com/rails/webpacker) 젬 사용을보다 쉽게 ​​통합 할 수 있습니다.
-Webpack 통합이 가능한 새로운 응용 프로그램을 생성 할 때 --webpack 플래그 사용합니다.
+새로운 [Webpacker](https://github.com/rails/webpacker) 젬 사용을보다 쉽게   통합 할 수 있습니다.
+Webpack 통합이 가능한 새로운 응용 프로그램을 생성 할 때 
+--webpack 플래그 사용합니다.
 
 이는 에셋 파이프라인과 완벽하게 호환되며 이미지, 폰트, 사운드 및 기타 자산에 대해 계속 사용할 수 있습니다. 
-에셋 파이프라인에 의해 관리되는 일부 JavaScript 코드 및 Webpack을 통해 처리되는 기타 코드를 가질 수도 있습니다.
+에셋 파이프라인에 의해 관리되는 일부 JavaScript 코드 및 
+Webpack을 통해 처리되는 기타 코드를 가질 수도 있습니다.
 이 모든 것은 Yarn에 의해 관리됩니다, default로 활성화되어 있습니다.
 
 ### jQuery는 더이상 기본 의존성이 아닙니다
@@ -73,8 +77,10 @@ plain, vanilla JavaScript를 사용하기 위해 UJS가 재작성 되었기 때�
 [Pull Request](https://github.com/rails/rails/pull/26703)
 
 Rails 5.1은 Capybara 테스트를 시스템 테스트의 형태로 작성하기 위해 내장된 지원을 제공한다. 
-해당 테스트를 위한 Capybara와 데이터베이스 정리 전략을 구성하는 거에 대해서 더이상 걱정하지 않아도 된다. 
-Rails 5.1은 크롬에서 실패 테스트 스크린 샷과 같은 추가 기능을 사용하여 테스트를 실행하는 래퍼를 제공한다.
+해당 테스트를 위한 Capybara와 데이터베이스 정리 전략을 구성하는 거에 대해서 
+더이상 걱정하지 않아도 된다. 
+Rails 5.1은 크롬에서 실패 테스트 스크린 샷과 같은 추가 기능을 사용하여 
+테스트를 실행하는 래퍼를 제공한다.
 
 ### 암호화된 보안들
 
