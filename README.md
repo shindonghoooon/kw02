@@ -41,10 +41,10 @@ Rails 5.1로 업그레이드하기
 [Pull Request](https://github.com/rails/rails/pull/26836)
 
 Rails 5.1은 NPM에서 Yarn을 통해 JavaScript 종속성을 관리 할 수 있습니다.
-이렇게하면 React, VueJS 또는 NPM 세계의 다른 라이브러리와 같은 라이브러리를 쉽게 사용할 수 있습니다. 
+이렇게하면 React, VueJS 또는 NPM 세계의 다른 라이브러리와 
+같은 라이브러리를 쉽게 사용할 수 있습니다. 
 Yarn 지원은 에셋 파이프라인과 통합되어 모든 종속성이 
 Rails 5.1 앱과 원활하게 작동합니다
-
 
 ### 선택적인 웹팩(Webpack) 지원
 
@@ -86,14 +86,12 @@ Rails 5.1은 크롬에서 실패 테스트 스크린 샷과 같은 추가 기능
 
 [Pull Request](https://github.com/rails/rails/pull/28038)
 
-
 Rails는 이제 
 [sekrets](https://github.com/ahoward/sekrets) gem에서 영감을 얻은 안전한 방법으로 애플리케이션 비밀 정보를 관리 할 수 있다.
-
 새로운 보안 비밀 파일을 설치하기 위해 `bin/rails secrets:setup`를 실행한다. 
 이것은 또한 저장소 외부에 저장되어야하는 마스터 키를 생성한다. 
-비밀 자체는 암호화 된 형식으로 변경 관리 시스템에 안전하게 체크인 할 수 있다.
-
+비밀 자체는 암호화 된 형식으로 변경 관리 
+시스템에 안전하게 체크인 할 수 있다.
 비밀은 `RAILS_MASTER_KEY` 환경 변수 또는 키 파일에 저장된 키를 사용하여 프로덕션에서 암호 해독된다.
 
 ### 매개변수화된 mailers
